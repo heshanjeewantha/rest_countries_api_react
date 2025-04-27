@@ -28,7 +28,7 @@ This project is a React frontend application developed using **functional compon
 
 ## 🚀 Live Demo
 
-🌐 [Visit Live Application](https://your-deployed-url.netlify.app)
+🌐 [Visit Live Application](https://rest-countries-api-react-khaki.vercel.app/)
 
 📂 [GitHub Repository](https://github.com/yourusername/rest-countries-app)
 
