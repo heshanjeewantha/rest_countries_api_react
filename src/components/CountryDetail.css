@@ -1,0 +1,173 @@
+/* CountryDetail.css */
+.country-detail {
+    max-width: 1200px;
+    
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  .country-card {
+    background-color: #e8edf0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .country-grid {
+    display: grid;
+    
+    grid-template-columns: 1fr;
+  }
+  
+  /* On tablets and larger screens, switch to two columns */
+  @media (min-width: 768px) {
+    .country-grid {
+      grid-template-columns: 40% 60%;
+    }
+  }
+  
+  .flag-container {
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #75d3ff;
+  }
+  
+  .country-flag {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .no-flag {
+    height: 200px;
+    width: 100%;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    border-radius: 4px;
+  }
+  
+  .info-container {
+    padding: 1.5rem;
+  }
+  
+  .info-container h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: #333;
+    font-size: 2rem;
+  }
+  
+  .country-info p {
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #444;
+  }
+  
+  .country-info strong {
+    font-weight: 600;
+    color: #222;
+  }
+  
+  .back-button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #0066cc;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+  }
+  
+  .back-button:hover {
+    background-color: #0052a3;
+  }
+  
+  /* Loading state */
+  .country-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1rem;
+    text-align: center;
+  }
+  
+  .spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top: 4px solid #0066cc;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Error state */
+  .country-error {
+    padding: 2rem 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .error-container {
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+  }
+  
+  .error-container h4 {
+    color: #856404;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .error-container p {
+    color: #856404;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Handle extremely large screens */
+  @media (min-width: 1400px) {
+    .country-detail {
+      max-width: 1400px;
+    }
+  }
+  
+  /* Handle small mobile screens */
+  @media (max-width: 480px) {
+    .info-container h2 {
+      font-size: 1.5rem;
+    }
+    
+    .country-info p {
+      font-size: 0.9rem;
+    }
+    
+    .flag-container {
+      padding: 1rem;
+    }
+    
+    .info-container {
+      padding: 1rem;
+    }
+  }
