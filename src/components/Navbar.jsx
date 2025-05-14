@@ -11,7 +11,7 @@ function Navbar() {
   }
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+    <nav className="navbar navbar-expand-lg bg-black  px-4">
       <Link className="navbar-brand d-inline p-2 bg-info text-white rounded" to="/">REST Countries</Link>
       <div className="collapse navbar-collapse">
         <ul className="navbar-nav ms-auto">
@@ -25,8 +25,8 @@ function Navbar() {
               </li>
             </>
           ) : (
-            <li className="nav-item">
-              <Link className="nav-link" to="/login">Login</Link>
+            <li className="nav-item text-white">
+              <Link className="nav-link text-white" to="/login">Login</Link>
             </li>
           )}
         </ul>

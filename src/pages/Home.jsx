@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react'
+import { motion } from 'framer-motion'
+
 import {
   fetchAllCountries,
   fetchCountryByName,
@@ -64,16 +66,23 @@ function Home() {
 
 return (
     
-    <div
-        className="container mt-4"
-        style={{
-            minHeight: '50vh',
-           
-            backgroundColor:'black',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-        }}
-    >
+  <div
+  className="container-fluid py-5"
+  style={{
+    minHeight: '100vh',
+    backgroundColor: 'black',
+    color: 'white',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+  }}
+>
+  {/* Hero / About Section */}
+  <div className="text-center mb-5 px-3">
+    <h1 className="display-4 fw-bold">🌍 Explore Countries</h1>
+    <p className="lead">
+      Search, filter and discover information about every country in the world.
+    </p>
+  </div>
         <SearchBar onSearch={handleSearch} />
         <Filter onRegionChange={handleRegionChange} onLanguageChange={handleLanguageChange} />
         {loading && <p>Loading countries...</p>}
